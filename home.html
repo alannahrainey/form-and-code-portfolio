@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alannah Rainey</title>
+  <link rel="stylesheet" href="home.css">
+  <style>
+    body {
+      background-color: rgb(87, 55, 86);
+      font-family: Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url('texturehome.png');
+      background-size: cover;
+      background-attachment: fixed;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    nav a {
+      text-decoration: none;
+      color: rgb(209, 184, 46);
+      margin-bottom: 5px;
+    }
+    .intro {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      width: 40%;
+      font-weight: 300;
+      color: rgb(209, 184, 46);
+    }
+    .portfolio-name {
+      text-align: left;
+      font-size: 180px; 
+      font-weight: bold;
+      font-style: oblique;
+      color: rgb(255, 215, 0); 
+      padding-bottom: 10px;
+      position: fixed;
+      bottom: 0px;
+      width: 100%;
+      left: 50px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+h1{
+  color:white;
+  text-shadow: 2px 2px 4px #000000;
+}
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+.navbar {
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+}
+
+.navbar .menu-items {
+  display: flex;
+}
+
+.navbar .nav-container li {
+  list-style: none;
+}
+
+.navbar .nav-container a {
+  text-decoration: none;
+  color: rgb(255, 215, 0); 
+;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+   
+}
+
+.navbar .nav-container a:hover{
+   color: purple;
+}
+
+.nav-container {
+  display: block;
+  position: relative;
+  height: 60px;
+}
+
+
+.nav-container .checkbox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+  display: block;
+  height: 28px;
+  width: 34px;
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .bar {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background:rgb(255, 215, 0); 
+}
+
+/* Adding transitions  */
+.nav-container .hamburger-lines .bar1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+
+}
+
+.nav-container .hamburger-lines .bar2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .bar3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+  padding-top: 10px;
+  height: 100vh;
+  width: 100%;
+  transform: translate(-150%);
+  display: flex;
+  flex-direction: column;
+  margin-left: -40px;
+  padding-left: 100px;
+  transition: transform 0.5s ease-in-out;
+  text-align: left;
+}
+
+.navbar .menu-items li {
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.logo {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 1.2rem;
+  color: rgb(255, 215, 0); 
+}
+
+/* Controlling the state of the icon */
+.nav-container input[type="checkbox"]:checked ~ .menu-items {
+  transform: translateX(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .bar1 {
+  transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .bar2 {
+  transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .bar3 {
+  transform: rotate(-45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .logo{
+  display: none;
+}      
+  </style>
+</head>
+<body>
+  <header>
+<nav>
+    <div class="navbar">
+      <div class="container nav-container">
+        <input class="checkbox" type="checkbox" name="" id="" />
+        <div class="hamburger-lines">
+          <span class="bar bar1"></span>
+          <span class="bar bar2"></span>
+          <span class="bar bar3"></span>
+        </div>
+        <div class="logo">
+        </div>
+        <div class="menu-items">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  </header>
+  <main>
+    <div class="intro">
+      <p>Designer located in Brooklyn, NY. Working towards a BFA in Communications Design (Graphic Design) and minors in UX/UI and Art History from Pratt Institute.</p>
+    </div>
+  </main>
+  <div class="portfolio-name">Alannah Rainey</div>
+</body>
+</html>
